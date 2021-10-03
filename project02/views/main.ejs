@@ -1,0 +1,20 @@
+<h1>글 목록</h1>
+<a href="/write">글 작성</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td scope="col">번호</td>
+            <td scope="col">제목</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% let i = 1; %>
+        <% for (let data of database) { %>
+            <tr>
+                <td><%=i++%></td>
+                <td><%=data.title%></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
